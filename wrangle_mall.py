@@ -1,3 +1,26 @@
+import pandas as pd
+import numpy as np
+import os
+# acquire
+from env import host, user, password
+from pydataset import data
+
+# visualize
+import seaborn as sns
+import matplotlib.pyplot as plt
+plt.rc('figure', figsize=(11, 9))
+plt.rc('font', size=13)
+
+# turn off pink warning boxes
+import warnings
+warnings.filterwarnings("ignore")
+
+# import splitting and imputing functions
+from sklearn.model_selection import train_test_split
+from sklearn.impute import SimpleImputer
+import sklearn.preprocessing
+
+
 ######################################acquire#####################################
 
 def get_connection(database, user=user, host=host, password=password):
